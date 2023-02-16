@@ -39,21 +39,22 @@
 #if defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega88) || defined(__AVR_ATmega8__) || defined(__AVR_ATmega88__)
   #define RF69_IRQ_PIN          2
   #define RF69_IRQ_NUM          0
+  #define Test_Pin              13
 #elif defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284P__)
   #define RF69_IRQ_PIN          2
   #define RF69_IRQ_NUM          2
+  #define Test_Pin              13
 #elif defined(__AVR_ATmega32U4__)
   #define RF69_IRQ_PIN          3
   #define RF69_IRQ_NUM          0
 #elif defined(__arm__)//Use pin 10 or any pin you want
   #define RF69_IRQ_PIN          10
   #define RF69_IRQ_NUM          10
+  #define Test_Pin              PC13
 #else 
   #define RF69_IRQ_PIN          2
   #define RF69_IRQ_NUM          0  
 #endif
-
-#define Test_Pin                PC13
 
 #define CSMA_LIMIT              -90 // upper RX signal sensitivity threshold in dBm for carrier sense access
 #define RF69_MODE_SLEEP         0 // XTAL OFF
